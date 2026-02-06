@@ -1,0 +1,4 @@
+pixivpy3
+python-dotenv
+flask  # 为 Koyeb 部署加 web endpoint
+supabase  # Supabase Python 客户端
