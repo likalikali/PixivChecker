@@ -11,12 +11,12 @@ from email.header import Header
 from dotenv import load_dotenv
 from supabase import create_client, Client
 
+
+# ================= 加载配置 =================
+load_dotenv()
 SUPABASE_URL = os.getenv("SUPABASE_URL")
 SUPABASE_KEY = os.getenv("SUPABASE_KEY")
 supabase: Client = create_client(SUPABASE_URL, SUPABASE_KEY)
-# ================= 加载配置 =================
-load_dotenv()
-
 # 1. 基础开关与显示配置
 ENABLE_TG = os.getenv("ENABLE_TG", "False").lower() == "false"
 ENABLE_EMAIL = os.getenv("ENABLE_EMAIL", "True").lower() == "true"
